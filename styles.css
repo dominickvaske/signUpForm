@@ -38,6 +38,7 @@ p, h1, h2, h3, h4, h5, h6 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	background-color:  #f4f4f2;
 }
 
 #bkgdImg {
@@ -45,17 +46,33 @@ p, h1, h2, h3, h4, h5, h6 {
 	width: 100%;
 }
 
-#form {
-	display: flex;
-	justify-content: space-evenly;
+.form {
+	background-color: white;
+	padding: 20px;
 }
 
-.form-left {
+#form-actual {
 	display: flex;
 	flex-direction: column;
+	gap: 15px;
 }
 
-.form-right {
-	display: flex;
-	flex-direction: column;
+.names, .contact-info, .passwords {
+  display: flex;
+  gap: 24px;              /* spacing between the two fields */
+}
+
+.names label,
+.contact-info label,
+.passwords label {
+  flex: 1;                /* each label takes half the row */
+  display: flex;
+  flex-direction: column; /* label text above input */
+}
+
+.names input,
+.contact-info input,
+.passwords input {
+  width: 100%;            /* input fills its label column */
+  box-sizing: border-box;
 }

@@ -10,6 +10,7 @@
 	<div class="container">
 		<div class="left-side">
 			<img id="bkgdImg" src="./halie-west-25xggax4bSA-unsplash.jpg">
+			<!-- <p>Photo by Halie West on Unsplash</p> -->
 		</div>
 		<div class="right-side">
 			<div class="right-container">
@@ -17,30 +18,50 @@
 					This is not a real online service! You know you need something like This
 					in your life to help you realize your deepest dreams. Sign up
 					<em>now</em> to get started.
-					You <em>know</em> you want to.
 				</p>
+				<p>You <em>know</em> you want to.</p>
 				<div class="form">
 					<h3>Let's do this!</h3>
-					<form id="form" action="example.com/path" method="post">
-						<div class="form-left">
-							<label for="first-name">First Name</label>
-							<input type="text" id="first-name" name="first-name">
-							<label for="email">Email</label>
-							<input type="email" id="email" name="email">
-							<label for="password">Password</label>
-							<input type="text" id="password" name="password">
+					<form id="form-actual" action="example.com/path" method="post">
+						<div class="names">
+							<label for="first-name">
+								First Name
+								<input type="text" id="first-name" name="first-name">
+							</label>
+							<label for="last-name">
+								Last Name
+								<input type="text" id="last-name" name="last-name">	
+							</label>
+						
 						</div>
-						<div class="form-right">
-							<label for="last-name">Last Name</label>
-							<input type="text" id="last-name" name="last-name">
-							<label for="phoneNum">Phone Number</label>
-							<input type="email" id="email" name="email">
-							<label for="cpwd">Confirm Password</label>
-							<input type="text" id="cpwd" name="cpwd">
+						<div class="contact-info">
+							<label for="email">
+								Email
+								<input type="email" id="email" name="email">
+							</label>
+							<label for="phoneNum">
+								Phone Number
+								<input type="number" id="phoneNum" name="phoneNum">
+							</label>								
 						</div>
-
+						<div class="passwords">
+							<label for="password">
+								Password
+								<input type="text" id="password" name="password">
+							</label>
+							<label for="cpwd">
+								Confirm Password
+								<input type="text" id="cpwd" name="cpwd">
+							</label>
+							
+						</div>
 					</form>
 				</div>
+				<div class="right-bottom">
+					<button type="submit">Create Account</button>
+					<p>Already have an account? Log in</p>
+				</div>
+
 			</div>
 
 
