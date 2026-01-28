@@ -1,0 +1,41 @@
+/* A basic modern reset */
+*, *::before, *::after {
+  box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
+}
+* {
+  margin: 0; /* Removes default margins from all elements */
+  padding: 0; /* Removes default padding from all elements */
+}
+body {
+  line-height: 1.5; /* Sets a more readable default line height */
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block; /* Makes media elements block-level for easier layout control */
+  max-width: 100%; /* Ensures images are responsive */
+}
+input, button, textarea, select {
+  font: inherit; /* Form elements inherit font properties by default */
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+.container {
+	display: flex;
+	height: 100vh;
+}
+
+.left-side  {
+	flex: 45%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.right-side {
+	flex: 55%;
+}
+
+#bkgdImg {
+	height: 100%;
+}
