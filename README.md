@@ -1,6 +1,6 @@
-# Sign-Up Form (HTML/CSS Basics)
+# Sign-Up Form (HTML/CSS Practice)
 
-Live Preview:
+Live Preview: https://dominickvaske.github.io/signUpForm/
 
 A simple sign-up form project built to practice:
 - Form structure and accessibility basics (labels, inputs, required fields)
