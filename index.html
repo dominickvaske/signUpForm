@@ -10,14 +10,6 @@
 	<div class="container">
 		<div class="left-side">
 			<img id="bkgdImg" src="./halie-west-25xggax4bSA-unsplash.jpg">
-			<!-- <div id="text-overlay">
-				<div id="odinLogo">
-					ODIN
-				</div>
-				<div id="credits">
-					<p>Photo by Halie West on Unsplash</p>
-				</div>
-			</div> -->
 			<div id="odinLogo">
 				<img id="odinFace" src="./odin-lined.png">
 				<p>ODIN</p>
@@ -28,51 +20,51 @@
 		</div>
 		<div class="right-side">
 			<div class="right-container">
-				<p>
-					This is not a real online service! You know you need something like This
+				<p class="info-text">
+					This is not a real online service! You know you need something like this
 					in your life to help you realize your deepest dreams. Sign up
 					<em>now</em> to get started.
 				</p>
 				<p>You <em>know</em> you want to.</p>
 				<div class="form">
 					<h3>Let's do this!</h3>
-					<form id="form-actual" action="example.com/path" method="post">
+					<form id="form-actual" action="" method="post">
 						<div class="names">
 							<label for="first-name">
 								First Name
-								<input type="text" id="first-name" name="first-name">
+								<input type="text" id="first-name" name="first-name" required>
 							</label>
 							<label for="last-name">
 								Last Name
-								<input type="text" id="last-name" name="last-name">	
+								<input type="text" id="last-name" name="last-name" required>	
 							</label>
 						
 						</div>
 						<div class="contact-info">
 							<label for="email">
 								Email
-								<input type="email" id="email" name="email">
+								<input type="email" id="email" name="email" required>
 							</label>
 							<label for="phoneNum">
 								Phone Number
-								<input type="number" id="phoneNum" name="phoneNum">
+								<input type="number" id="phoneNum" name="phoneNum" required pattern="\d{3}-?\d{3}-?\d{4}">
 							</label>								
 						</div>
 						<div class="passwords">
 							<label for="password">
 								Password
-								<input type="text" id="password" name="password">
+								<input type="text" id="password" name="password" minlength="8" maxlength="64" required>
 							</label>
 							<label for="cpwd">
 								Confirm Password
-								<input type="text" id="cpwd" name="cpwd">
+								<input type="text" id="cpwd" name="cpwd" minlength="8" maxlength="64" required>
 							</label>
 							
 						</div>
 					</form>
 				</div>
 				<div class="right-bottom">
-					<button type="submit">Create Account</button>
+					<button type="submit" form="form-actual">Create Account</button>
 					<p>Already have an account? Log in</p>
 				</div>
 

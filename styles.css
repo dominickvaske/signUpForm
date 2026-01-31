@@ -2,21 +2,33 @@
 *, *::before, *::after {
   box-sizing: border-box; /* Ensures padding and border are included in element's total width/height */
 }
+
 * {
   margin: 0; /* Removes default margins from all elements */
   padding: 0; /* Removes default padding from all elements */
+  --side-section-width: 40%;
+
+  --ff-base: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  --clr-green: #596D48;
+  --clr-border: #E5E7EB;
+  --clr-gelo: #F9FAFB;
 }
+
 body {
   line-height: 1.5; /* Sets a more readable default line height */
   -webkit-font-smoothing: antialiased;
 }
+
 img, picture, video, canvas, svg {
   display: block; /* Makes media elements block-level for easier layout control */
   max-width: 100%; /* Ensures images are responsive */
 }
+
 input, button, textarea, select {
   font: inherit; /* Form elements inherit font properties by default */
 }
+
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
@@ -35,7 +47,8 @@ p, h1, h2, h3, h4, h5, h6 {
 /* LEFT SIDE OF PAGE */
 
 .left-side  {
-	flex: 30%;
+	flex: 3;
+	/* width: --side-section-width; */
 	height: 100%;
 	object-fit: cover;
 	position: relative;
@@ -48,29 +61,34 @@ p, h1, h2, h3, h4, h5, h6 {
 	width: 100%;
 }
 
-/* #text-overlay {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	color: white;
-	top: 50%;
-	z-index: 1;
-} */
-
 #odinLogo {
 	color: white;
 	position: absolute;
 	z-index: 1;
 	top: 25%;
-	left: 15%;
+	left: 0;  /*left edge has 0 offset from parent container*/
+	right: 0; /*right edge has 0 offset*/
+
 	display: flex;
 	align-items: center;
+	justify-content: center;
+
 	font-family: 'Norse Bold';
 	font-size: 70px;
 	background-color: rgba(0, 0, 0, 0.5);
 	
+}
+
+#credits {
+	color: white;
+	position: absolute;
+	z-index: 1;
+	bottom: 2px;
+	left: 0;
+	right: 0;
+
+	display: flex;
+	justify-content: center;
 }
 
 #odinFace {
@@ -80,13 +98,29 @@ p, h1, h2, h3, h4, h5, h6 {
 /* RIGHT SIDE OF PAGE */
 
 .right-side {
-	flex: 70%;
+	flex: 7;
+	/* width: calc(100% - var(--side-section-width)); */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	/* align-items: center; */
 	background-color:  #f4f4f2;
+	padding-left: 40px;
 }
+
+.right-container {
+	width: 80%;
+	max-width: 600px;
+
+	font-weight: bold;
+	font-family: var(--ff-base);
+
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+}
+
 
 .form {
 	background-color: white;
@@ -117,4 +151,37 @@ p, h1, h2, h3, h4, h5, h6 {
 .passwords input {
   width: 100%;            /* input fills its label column */
   box-sizing: border-box;
+}
+
+input {
+	font-weight: normal;
+}
+
+.right-bottom button {
+	height: 40px;
+	width: 200px;
+	border-radius: 8px;
+
+	background-color: var(--clr-green);
+	border: none;
+	color: white;
+
+	cursor: pointer;
+}
+
+.right-bottom {
+	padding-top: 20px;
+}
+
+.right-bottom p{
+	padding-top: 20px;
+}
+
+input:focus {
+  border: 1px solid blue;
+  box-shadow: 2px 2px 5px rgb(192, 192, 192);
+}
+
+input:user-invalid {
+  border: 1px solid rgb(189, 2, 2);
 }
