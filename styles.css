@@ -26,11 +26,58 @@ p, h1, h2, h3, h4, h5, h6 {
 	height: 100vh;
 }
 
+@font-face {
+	font-family: 'Norse Bold';
+	src: url(./fonts/norse.bold.otf);
+	font-weight: bold;
+}
+
+/* LEFT SIDE OF PAGE */
+
 .left-side  {
 	flex: 30%;
 	height: 100%;
 	object-fit: cover;
+	position: relative;
+	display: inline-block;
 }
+
+#bkgdImg {
+	display: block;
+	height: 100%;
+	width: 100%;
+}
+
+/* #text-overlay {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	color: white;
+	top: 50%;
+	z-index: 1;
+} */
+
+#odinLogo {
+	color: white;
+	position: absolute;
+	z-index: 1;
+	top: 25%;
+	left: 15%;
+	display: flex;
+	align-items: center;
+	font-family: 'Norse Bold';
+	font-size: 70px;
+	background-color: rgba(0, 0, 0, 0.5);
+	
+}
+
+#odinFace {
+	height: 70px;
+}
+
+/* RIGHT SIDE OF PAGE */
 
 .right-side {
 	flex: 70%;
@@ -39,11 +86,6 @@ p, h1, h2, h3, h4, h5, h6 {
 	justify-content: center;
 	align-items: center;
 	background-color:  #f4f4f2;
-}
-
-#bkgdImg {
-	height: 100%;
-	width: 100%;
 }
 
 .form {
