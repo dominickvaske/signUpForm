@@ -42,7 +42,6 @@ This project includes basic client-side validation to ensure:
 
 - HTML5
 - CSS3 (Flexbox + positioning)
-- JavaScript (validation + interaction)
 
 No frameworks.
 
